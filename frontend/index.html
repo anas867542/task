@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Risk Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Transaction Risk Monitoring System</h1>
+
+<!-- Dashboard -->
+<div class="dashboard">
+    <h2>Dashboard</h2>
+    <p>Total Transactions: <span id="total">0</span></p>
+    <p>Flagged Transactions: <span id="flagged">0</span></p>
+    <p>High Risk: <span id="highRisk">0</span></p>
+    <p>Suspicious: <span id="suspicious">0</span></p>
+</div>
+
+<hr>
+
+<!-- Transaction Form -->
+<div>
+    <h2>Add Transaction</h2>
+
+    <form id="transactionForm">
+
+        <input type="text" id="transaction_id" placeholder="Transaction ID" required>
+        <input type="text" id="user_id" placeholder="User ID" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="text" id="device_id" placeholder="Device ID" required>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+<hr>
+
+<!-- Transactions Table -->
+<div>
+    <h2>Transactions</h2>
+
+    <table id="transactionsTable">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>User ID</th>
+                <th>Amount</th>
+                <th>Device ID</th>
+                <th>Risk Flag</th>
+                <th>Rule Triggered</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
