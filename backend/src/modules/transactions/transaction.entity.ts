@@ -3,6 +3,7 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
+  Index,
 } from 'typeorm';
 
 @Entity('transactions')
@@ -14,6 +15,7 @@ export class Transaction {
   transaction_id: string;
 
   @Column()
+  @Index()
   user_id: string;
 
   @Column('decimal')
@@ -26,6 +28,7 @@ export class Transaction {
   timestamp: Date;
 
   @Column({ default: 'NONE' })
+  @Index()
   risk_flag: string;
 
   @Column({ nullable: true })
