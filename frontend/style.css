@@ -1,6 +1,80 @@
 body {
-    font-family: Arial;
-    padding: 20px;
+    font-family: Tahoma, Arial, sans-serif;
+    padding: 18px;
+    background: #fafafa;
+}
+
+.page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-bottom: 22px;
+}
+
+.dashboard {
+    background: #e5e5e5;
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #ccc;
+}
+
+.dashboard h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    margin: 6px 0;
+}
+
+.form-section {
+    padding: 18px 0;
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+#transactionForm label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+#transactionForm label:first-of-type {
+    margin-top: 0;
+}
+
+#transactionForm input {
+    display: block;
+    width: 220px;
+    padding: 6px 10px;
+    border: 1px solid #bbb;
+    margin-bottom: 2px;
+}
+
+#transactionForm button[type="submit"] {
+    cursor: pointer;
+    background-color: #2563a0;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    margin-top: 14px;
+    border-radius: 2px;
+}
+
+.table-section {
+    padding-top: 4px;
+}
+
+.table-section h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 table {
@@ -9,26 +83,21 @@ table {
 }
 
 th, td {
-    border: 1px solid black;
+    border: 1px solid #bbb;
     padding: 8px;
 }
 
+th {
+    background: #ddd;
+    font-weight: bold;
+}
+
 .high-risk {
-    background-color: red;
+    background-color: #c00;
     color: white;
 }
 
 .suspicious {
-    background-color: orange;
-}
-
-.dashboard {
-    background: #f4f4f4;
-    padding: 10px;
-}
-
-#transactionForm button[type="submit"] {
-    cursor: pointer;
-    background-color: blue;
-    color: white;
+    background-color: #e69500;
+    color: #222;
 }

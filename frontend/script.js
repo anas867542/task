@@ -74,11 +74,13 @@ async function loadTransactions() {
             row.classList.add("suspicious");
 
 
+        const dateStr = tx.timestamp ? new Date(tx.timestamp).toLocaleString() : (tx.created_at ? new Date(tx.created_at).toLocaleString() : "");
         row.innerHTML = `
             <td>${tx.transaction_id}</td>
             <td>${tx.user_id}</td>
             <td>${tx.amount}</td>
             <td>${tx.device_id}</td>
+            <td>${dateStr}</td>
             <td>${tx.risk_flag}</td>
             <td>${tx.rule_triggered || ""}</td>
         `;
