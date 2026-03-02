@@ -44,7 +44,12 @@ document.getElementById("transactionForm")
 
     } else {
 
-        alert("Error adding transaction");
+        let msg = "Error adding transaction";
+        try {
+            const err = await res.json();
+            if (err && err.message) msg = err.message;
+        } catch (_) {}
+        alert(msg);
 
     }
 
